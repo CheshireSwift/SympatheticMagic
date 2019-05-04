@@ -1,4 +1,4 @@
-package com.example.examplemod
+package co.uk.swifteagle.sympatheticmagic
 
 import net.minecraft.init.Blocks
 import net.minecraftforge.fml.common.Mod
@@ -7,12 +7,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import org.apache.logging.log4j.Logger
 
-const val MODID = "examplemod"
-const val NAME = "Example Mod"
+const val MODID = "sympatheticmagic"
+const val NAME = "Sympathetic Magic"
 const val VERSION = "1.0"
 
 @Mod(modid = MODID, name = NAME, version = VERSION)
-class ExampleMod {
+class SympatheticMagic {
 
     @EventHandler
     fun preInit(event: FMLPreInitializationEvent) {
@@ -22,10 +22,10 @@ class ExampleMod {
     @EventHandler
     fun init(event: FMLInitializationEvent) {
         // some example code
-        logger!!.info("DIRT BLOCK >> {}", Blocks.DIRT.registryName)
+        logger.info("IRON BLOCK >> {}", Blocks.IRON_BLOCK.registryName)
     }
 
     companion object {
-        private var logger: Logger? = null
+        private lateinit var logger: Logger
     }
 }
